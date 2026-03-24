@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Potinho da Fé – 96 Orações para Crianças</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FDF8F0; --warm: #F5EDD8; --gold: #C89B3C; --gold-light: #E8C97A;
+    --brown: #7A4F2D; --brown-dark: #3E2310; --green: #4A7C59;
+    --rose: #E07A5F; --text: #2D1A0E; --text-soft: #6B4C34;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Nunito',sans-serif; background:var(--cream); color:var(--text); overflow-x:hidden; }
+
+  /* HERO */
+  .hero { background:linear-gradient(160deg,#3E2310 0%,#7A4F2D 50%,#C89B3C 100%); position:relative; overflow:hidden; padding:60px 20px 80px; text-align:center; }
+  .hero::before { content:''; position:absolute; inset:0; background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); pointer-events:none; }
+  .hero-badge { display:inline-block; background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.3); color:#FFE9A0; font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase; padding:6px 18px; border-radius:50px; margin-bottom:24px; animation:fadeDown 0.6s ease both; }
+  .hero h1 { font-family:'Playfair Display',serif; font-size:clamp(2.2rem,6vw,3.8rem); color:#FFF; line-height:1.15; margin-bottom:20px; animation:fadeDown 0.7s ease 0.1s both; }
+  .hero h1 em { font-style:italic; color:var(--gold-light); }
+  .hero-sub { font-size:clamp(1rem,2.5vw,1.2rem); color:rgba(255,255,255,0.85); max-width:560px; margin:0 auto 36px; line-height:1.7; animation:fadeDown 0.7s ease 0.2s both; }
+  .hero-mockup { width:min(320px,85vw); margin:0 auto 36px; position:relative; animation:float 4s ease-in-out infinite, fadeUp 0.8s ease 0.3s both; }
+  .hero-mockup .jar { font-size:120px; line-height:1; filter:drop-shadow(0 20px 40px rgba(0,0,0,0.4)); }
+  .hero-mockup .glow { position:absolute; bottom:-10px; left:50%; transform:translateX(-50%); width:180px; height:30px; background:radial-gradient(ellipse,rgba(200,155,60,0.5) 0%,transparent 70%); border-radius:50%; }
+  .cta-hero { display:inline-block; background:linear-gradient(135deg,#4A7C59,#2D5A3D); color:white; font-size:1.15rem; font-weight:800; padding:18px 42px; border-radius:60px; text-decoration:none; box-shadow:0 8px 30px rgba(0,0,0,0.3),0 2px 0 rgba(255,255,255,0.15) inset; transition:transform 0.2s,box-shadow 0.2s; animation:fadeUp 0.8s ease 0.4s both,pulse 2.5s ease-in-out 1s infinite; cursor:pointer; border:none; font-family:'Nunito',sans-serif; letter-spacing:0.3px; }
+  .cta-hero:hover { transform:translateY(-3px); box-shadow:0 14px 40px rgba(0,0,0,0.35); animation:none; }
+  .hero-price-hint { margin-top:14px; color:rgba(255,255,255,0.65); font-size:0.9rem; animation:fadeUp 0.8s ease 0.5s both; }
+  .hero-price-hint strong { color:var(--gold-light); }
+
+  /* LAYOUT */
+  .section { padding:64px 20px; }
+  .section-inner { max-width:720px; margin:0 auto; }
+  .section-tag { display:inline-flex; align-items:center; gap:8px; font-size:12px; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:var(--rose); margin-bottom:16px; }
+  .section-tag::before,.section-tag::after { content:''; width:24px; height:1.5px; background:var(--rose); display:block; }
+  h2 { font-family:'Playfair Display',serif; font-size:clamp(1.7rem,4vw,2.4rem); color:var(--brown-dark); line-height:1.25; margin-bottom:20px; }
+
+  /* PAIN */
+  .pain-list { list-style:none; display:flex; flex-direction:column; gap:16px; margin-top:28px; }
+  .pain-list li { display:flex; gap:16px; align-items:flex-start; background:white; border-radius:16px; padding:18px 20px; box-shadow:0 2px 12px rgba(0,0,0,0.06); border-left:4px solid var(--rose); }
+  .pain-list li .icon { font-size:1.5rem; flex-shrink:0; }
+  .pain-list li p { font-size:0.97rem; line-height:1.6; color:var(--text-soft); }
+  .pain-list li p strong { color:var(--text); display:block; margin-bottom:2px; font-size:1rem; }
+
+  /* SOLUTION */
+  .solution-section { background:linear-gradient(160deg,#F5EDD8 0%,#FDF8F0 100%); border-top:1px solid #EAD8B8; border-bottom:1px solid #EAD8B8; }
+  .product-card { background:white; border-radius:24px; padding:36px 28px; box-shadow:0 8px 40px rgba(122,79,45,0.12); border:1.5px solid #EAD8B8; position:relative; overflow:hidden; }
+  .product-card::before { content:'🙏'; position:absolute; top:-10px; right:-10px; font-size:100px; opacity:0.05; transform:rotate(15deg); }
+  .product-title { font-family:'Playfair Display',serif; font-size:1.9rem; color:var(--brown-dark); margin-bottom:8px; }
+  .product-subtitle { color:var(--text-soft); font-size:0.97rem; margin-bottom:28px; line-height:1.6; }
+  .includes-list { list-style:none; display:flex; flex-direction:column; gap:12px; margin-bottom:32px; }
+  .includes-list li { display:flex; align-items:flex-start; gap:12px; font-size:0.97rem; line-height:1.5; color:var(--text); }
+  .includes-list .check { width:22px; height:22px; background:var(--green); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px; color:white; flex-shrink:0; margin-top:1px; }
+  .bonus-box { background:linear-gradient(135deg,#FFF8E6,#FFF3D0); border:1.5px dashed var(--gold); border-radius:16px; padding:20px; margin-bottom:28px; }
+  .bonus-box h4 { font-size:0.8rem; letter-spacing:2px; text-transform:uppercase; color:var(--gold); margin-bottom:10px; }
+  .bonus-item { display:flex; gap:10px; align-items:center; margin-bottom:8px; font-size:0.93rem; color:var(--brown-dark); }
+
+  /* VIDEO */
+  .video-section { background:var(--brown-dark); padding:64px 20px; }
+  .video-section .section-tag { color:var(--gold-light); }
+  .video-section .section-tag::before,.video-section .section-tag::after { background:var(--gold-light); }
+  .video-section h2 { color:white; }
+  .video-wrapper { margin-top:32px; border-radius:20px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,0.5); background:#111; aspect-ratio:16/9; position:relative; display:flex; align-items:center; justify-content:center; min-height:200px; }
+  .video-wrapper iframe { width:100%; height:100%; border:none; display:block; }
+  .video-placeholder { width:100%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; background:linear-gradient(135deg,#2a1a0a,#4A3020); color:rgba(255,255,255,0.5); font-size:0.9rem; gap:12px; padding:40px; text-align:center; }
+  .video-placeholder .play-btn { width:64px; height:64px; background:rgba(255,255,255,0.1); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:26px; border:2px solid rgba(255,255,255,0.2); }
+
+  /* PRICING */
+  .pricing-section { background:var(--cream); }
+  .price-card { background:white; border-radius:20px; padding:28px; box-shadow:0 4px 20px rgba(0,0,0,0.07); border:2px solid #EAD8B8; position:relative; transition:transform 0.2s,border-color 0.2s; }
+  .price-card.featured { border-color:var(--green); background:linear-gradient(135deg,#F0FAF3,white); }
+  .cta-price { display:block; width:100%; background:linear-gradient(135deg,#4A7C59,#2D5A3D); color:white; font-size:1rem; font-weight:800; padding:15px 20px; border-radius:50px; text-align:center; margin-top:16px; box-shadow:0 6px 20px rgba(74,124,89,0.35); transition:transform 0.2s,box-shadow 0.2s; cursor:pointer; border:none; font-family:'Nunito',sans-serif; }
+  .cta-price:hover { transform:translateY(-2px); box-shadow:0 10px 28px rgba(74,124,89,0.4); }
+
+  /* TESTIMONIALS */
+  .testimonials-section { background:linear-gradient(160deg,#3E2310 0%,#5A3420 100%); }
+  .testimonials-section h2 { color:white; }
+  .testimonials-section .section-tag { color:var(--gold-light); }
+  .testimonials-section .section-tag::before,.testimonials-section .section-tag::after { background:var(--gold-light); }
+  .testimonials-grid { display:grid; gap:16px; margin-top:32px; }
+  .testimonial { background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:18px; padding:24px; position:relative; }
+  .testimonial::before { content:'"'; font-family:'Playfair Display',serif; font-size:72px; color:var(--gold); opacity:0.3; position:absolute; top:-10px; left:16px; line-height:1; }
+  .testimonial p { color:rgba(255,255,255,0.9); font-size:0.95rem; line-height:1.7; margin-bottom:16px; }
+  .testimonial-author { display:flex; align-items:center; gap:10px; }
+  .testimonial-avatar { width:40px; height:40px; border-radius:50%; background:linear-gradient(135deg,var(--gold),var(--brown)); display:flex; align-items:center; justify-content:center; font-size:18px; }
+  .testimonial-name { font-weight:800; color:white; font-size:0.9rem; }
+  .testimonial-role { color:rgba(255,255,255,0.5); font-size:0.78rem; }
+  .stars { color:var(--gold-light); font-size:0.85rem; margin-bottom:4px; }
+
+  /* AUTORA */
+  .autora-section { background:var(--warm); border-top:1px solid #EAD8B8; }
+  .autora-card { background:white; border-radius:24px; padding:36px 28px; box-shadow:0 4px 24px rgba(0,0,0,0.07); border:1.5px solid #EAD8B8; display:flex; gap:28px; align-items:flex-start; }
+  .autora-photo { width:100px; height:100px; min-width:100px; border-radius:50%; background:linear-gradient(135deg,#EAD8B8,#C89B3C); display:flex; align-items:center; justify-content:center; font-size:12px; color:var(--brown); font-weight:700; text-align:center; line-height:1.4; padding:8px; border:3px solid #EAD8B8; overflow:hidden; flex-shrink:0; }
+  .autora-photo img { width:100%; height:100%; object-fit:cover; border-radius:50%; }
+  .autora-name { font-family:'Playfair Display',serif; font-size:1.3rem; color:var(--brown-dark); margin-bottom:4px; }
+  .autora-role { font-size:0.8rem; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
+  .autora-bio { font-size:0.92rem; color:var(--text-soft); line-height:1.75; }
+  @media(max-width:520px){ .autora-card{flex-direction:column;align-items:center;text-align:center;} }
+
+  /* GUARANTEE */
+  .guarantee-section { background:var(--cream); }
+  .guarantee-box { background:white; border-radius:24px; padding:36px 28px; box-shadow:0 4px 24px rgba(0,0,0,0.07); border:2px solid #D4EDDA; text-align:center; }
+  .guarantee-icon { font-size:72px; margin-bottom:16px; }
+  .guarantee-box h3 { font-family:'Playfair Display',serif; font-size:1.6rem; color:var(--brown-dark); margin-bottom:12px; }
+  .guarantee-box p { color:var(--text-soft); line-height:1.7; font-size:0.97rem; max-width:480px; margin:0 auto; }
+
+  /* FAQ */
+  .faq-section { background:var(--warm); }
+  .faq-item { background:white; border-radius:14px; margin-bottom:10px; overflow:hidden; border:1px solid #EAD8B8; }
+  .faq-q { padding:18px 20px; font-weight:700; font-size:0.97rem; cursor:pointer; display:flex; justify-content:space-between; align-items:center; color:var(--brown-dark); user-select:none; }
+  .faq-q .arrow { font-size:0.8rem; color:var(--gold); transition:transform 0.3s; }
+  .faq-a { max-height:0; overflow:hidden; transition:max-height 0.35s ease,padding 0.35s ease; padding:0 20px; color:var(--text-soft); font-size:0.93rem; line-height:1.7; }
+  .faq-item.open .faq-a { max-height:220px; padding:0 20px 18px; }
+  .faq-item.open .arrow { transform:rotate(180deg); }
+
+  /* FINAL CTA */
+  .final-cta { background:linear-gradient(160deg,#4A7C59 0%,#2D5A3D 100%); text-align:center; padding:72px 20px; position:relative; overflow:hidden; }
+  .final-cta::before { content:'+'; position:absolute; font-size:300px; color:rgba(255,255,255,0.04); top:50%; left:50%; transform:translate(-50%,-50%); pointer-events:none; }
+  .final-cta h2 { color:white; font-family:'Playfair Display',serif; font-size:clamp(1.7rem,4vw,2.4rem); margin-bottom:16px; }
+  .final-cta p { color:rgba(255,255,255,0.8); margin-bottom:32px; font-size:1rem; line-height:1.7; max-width:480px; margin-left:auto; margin-right:auto; }
+  .final-cta .cta-hero { background:white; color:var(--green); margin-bottom:12px; }
+  .final-cta .cta-hero:hover { background:#f5f5f5; }
+  .final-cta .disclaimer { color:rgba(255,255,255,0.5); font-size:0.8rem; }
+
+  /* FOOTER */
+  footer { background:var(--brown-dark); color:rgba(255,255,255,0.4); text-align:center; padding:28px 20px; font-size:0.78rem; line-height:1.8; }
+  footer a { color:rgba(255,255,255,0.5); text-decoration:none; }
+
+  /* STICKY BAR */
+  .sticky-bar { position:fixed; bottom:0; left:0; right:0; background:linear-gradient(90deg,#3E2310,#7A4F2D); padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; z-index:999; box-shadow:0 -4px 20px rgba(0,0,0,0.25); transform:translateY(100%); transition:transform 0.4s ease; }
+  .sticky-bar.visible { transform:translateY(0); }
+  .sticky-bar-text { color:white; font-size:0.85rem; line-height:1.3; }
+  .sticky-bar-text strong { display:block; font-size:0.95rem; }
+  .sticky-cta { background:var(--green); color:white; font-weight:800; font-size:0.85rem; padding:10px 18px; border-radius:40px; white-space:nowrap; flex-shrink:0; border:none; font-family:'Nunito',sans-serif; cursor:pointer; }
+
+  /* UPSELL OVERLAY */
+  .upsell-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.65); z-index:2000; align-items:center; justify-content:center; padding:20px; }
+  .upsell-overlay.active { display:flex; }
+  .upsell-box { background:white; border-radius:24px; max-width:420px; width:100%; padding:32px 28px; position:relative; box-shadow:0 24px 80px rgba(0,0,0,0.35); animation:popIn 0.35s cubic-bezier(0.34,1.56,0.64,1) both; }
+  .upsell-close { position:absolute; top:14px; right:16px; background:none; border:none; font-size:1.3rem; cursor:pointer; color:#999; line-height:1; }
+
+  /* TOAST */
+  .toast-notif { position:fixed; bottom:80px; left:16px; z-index:1500; max-width:300px; transform:translateX(-120%); transition:transform 0.45s cubic-bezier(0.34,1.4,0.64,1); }
+  .toast-inner { background:white; border-radius:12px; padding:12px 16px; box-shadow:0 8px 32px rgba(0,0,0,0.18); border-left:4px solid #4A7C59; }
+  .toast-name { font-size:0.82rem; font-weight:800; color:#3E2310; }
+  .toast-msg { font-size:0.76rem; color:#6B4C34; margin-top:2px; }
+  .toast-city { font-size:0.7rem; color:#aaa; margin-top:3px; }
+
+  /* ANIMATIONS */
+  @keyframes fadeDown { from{opacity:0;transform:translateY(-20px);}to{opacity:1;transform:translateY(0);} }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);} }
+  @keyframes float { 0%,100%{transform:translateY(0);}50%{transform:translateY(-12px);} }
+  @keyframes pulse { 0%,100%{box-shadow:0 8px 30px rgba(74,124,89,0.35);}50%{box-shadow:0 8px 50px rgba(74,124,89,0.65);} }
+  @keyframes popIn { from{opacity:0;transform:scale(0.82) translateY(24px);}to{opacity:1;transform:scale(1) translateY(0);} }
+
+  @media(max-width:480px){ .hero{padding:48px 16px 64px;} .section{padding:48px 16px;} .product-card{padding:24px 18px;} }
+</style>
+</head>
+<body>
+
+<!-- STICKY BAR -->
+<div class="sticky-bar" id="stickyBar">
+  <div class="sticky-bar-text">
+    <strong>🫙 Potinho da Fé</strong>
+    96 orações para crescer na fé
+  </div>
+  <button class="sticky-cta" id="stickyBtn">Quero agora →</button>
+</div>
+
+<!-- UPSELL MODAL -->
+<div class="upsell-overlay" id="upsellOverlay">
+  <div class="upsell-box">
+    <button class="upsell-close" id="upsellClose">✕</button>
+    <div style="text-align:center;margin-bottom:20px;">
+      <div style="font-size:44px;margin-bottom:8px;">🌟</div>
+      <div style="background:#FFF3CD;border:1.5px solid #C89B3C;color:#7A4F2D;font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:5px 14px;border-radius:40px;display:inline-block;margin-bottom:12px;">Espera! Oferta especial para você</div>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.4rem;color:#3E2310;line-height:1.3;margin-bottom:8px;">
+        Por <span style="text-decoration:line-through;color:#aaa;font-size:1rem;">R$19,90</span> só <span style="color:#4A7C59;">R$14,90</span> agora
+      </h3>
+      <p style="color:#6B4C34;font-size:0.9rem;line-height:1.6;">Por <strong>R$5 a mais</strong> você leva muito mais. Só válido nesse momento:</p>
+    </div>
+    <div style="background:#F0FAF3;border-radius:14px;padding:16px 18px;margin-bottom:20px;border:1px solid #B8DFC4;">
+      <div style="font-size:0.85rem;font-weight:800;color:#2D5A3D;margin-bottom:10px;">O que você recebe no Completo:</div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div style="font-size:0.88rem;color:#3E2310;">✓ 96 orações infantis para imprimir</div>
+        <div style="font-size:0.88rem;color:#3E2310;">✓ <strong>365 Versículos Bíblicos</strong> — um por dia, o ano inteiro</div>
+        <div style="font-size:0.88rem;color:#3E2310;">✓ Rótulos personalizados para presentear</div>
+        <div style="font-size:0.88rem;color:#3E2310;">✓ Rótulo especial + molde de caixinha</div>
+        <div style="font-size:0.88rem;color:#3E2310;">✓ Guia de como usar com filhos e netos</div>
+      </div>
+    </div>
+    <button id="upsellAccept" style="display:block;width:100%;background:linear-gradient(135deg,#4A7C59,#2D5A3D);color:white;font-family:'Nunito',sans-serif;font-size:1rem;font-weight:800;padding:15px;border-radius:50px;border:none;cursor:pointer;box-shadow:0 6px 20px rgba(74,124,89,0.4);margin-bottom:10px;">
+      Sim! Quero o Completo por R$14,90 →
+    </button>
+    <button id="upsellDecline" style="display:block;width:100%;background:none;border:none;color:#bbb;font-size:0.8rem;font-family:'Nunito',sans-serif;cursor:pointer;padding:6px;text-decoration:underline;">
+      Não, prefiro só o básico mesmo
+    </button>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast-notif" id="toastNotif">
+  <div class="toast-inner">
+    <div class="toast-name" id="toastName">Maria Clara</div>
+    <div class="toast-msg" id="toastMsg">acabou de comprar o Pacote Completo</div>
+    <div class="toast-city" id="toastCity">São Paulo · agora mesmo</div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">✨ Novidade para famílias cristãs</div>
+  <h1>Seu filho vai <em>amar</em> orar<br>— todos os dias</h1>
+  <p class="hero-sub">96 orações lindas para imprimir, recortar e colocar num potinho. Simples assim. Uma nova tradição de fé que cabe em qualquer rotina.</p>
+  <div class="hero-mockup">
+    <div class="jar">🫙</div>
+    <div class="glow"></div>
+  </div>
+  <button class="cta-hero" id="heroCta">Quero o Potinho da Fé →</button>
+  <p class="hero-price-hint">A partir de <strong>R$9,90</strong> — acesso imediato, 100% digital</p>
+</section>
+
+<!-- PAIN -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-tag">Você se identifica?</div>
+    <h2>A vontade existe.<br>A correria atrapalha.</h2>
+    <p style="color:var(--text-soft);line-height:1.7;margin-bottom:8px;">Você quer criar seus filhos com fé, com valores, perto de Deus. Mas a realidade é outra:</p>
+    <ul class="pain-list">
+      <li><div class="icon">😔</div><p><strong>Chega cansado do trabalho</strong>E a oração de antes de dormir… acaba esquecida. Mais uma vez.</p></li>
+      <li><div class="icon">😤</div><p><strong>A criança não para quieta</strong>Você tenta ensinar a Palavra, mas em 2 minutos ela já perdeu o interesse.</p></li>
+      <li><div class="icon">😟</div><p><strong>Não sabe por onde começar</strong>Quer ensinar a orar, mas não tem um ritual diário simples o suficiente para manter.</p></li>
+      <li><div class="icon">💔</div><p><strong>O tempo vai passando</strong>E você sente que a criança está crescendo sem ter aquela raiz espiritual que você queria dar.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section class="section solution-section">
+  <div class="section-inner">
+    <div class="section-tag">A solução</div>
+    <h2>Um ritual simples que aproxima<br>você e sua família de Jesus</h2>
+    <div class="product-card" style="margin-top:28px">
+      <div style="font-size:48px;margin-bottom:12px;">🫙✨</div>
+      <div class="product-title">Potinho da Fé</div>
+      <p class="product-subtitle">Todo dia, a criança tira uma oração do potinho, lê com você e conversa com Deus. É isso. Leva menos de 5 minutos — e cria um hábito de fé que dura a vida inteira.</p>
+      <ul class="includes-list">
+        <li><div class="check">✓</div><span><strong>96 orações infantis</strong> — escritas de forma simples, leve e encantadora, para crianças de 3 a 12 anos</span></li>
+        <li><div class="check">✓</div><span><strong>PDF colorido e ilustrado</strong> — pronto para imprimir em casa, na papelaria ou na gráfica</span></li>
+        <li><div class="check">✓</div><span><strong>Cartõezinhos para recortar</strong> — tamanho perfeito para caber num potinho ou caixinha</span></li>
+        <li><div class="check">✓</div><span><strong>Rótulo especial + molde de caixinha</strong> — para montar do jeitinho que você quiser</span></li>
+        <li><div class="check">✓</div><span><strong>Entrega imediata</strong> — você recebe agora mesmo no e-mail ou WhatsApp</span></li>
+      </ul>
+      <div class="bonus-box">
+        <h4>🎁 Bônus exclusivos (Pacote Completo)</h4>
+        <div class="bonus-item"><span>📖</span> 365 Versículos Bíblicos para cada dia do ano</div>
+        <div class="bonus-item"><span>🎨</span> Rótulos personalizados para presentear</div>
+        <div class="bonus-item"><span>💌</span> Guia: como usar com filhos, netos e sobrinhos</div>
+      </div>
+      <button class="cta-price" id="solutionCta">Quero o Potinho da Fé agora →</button>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO SECTION -->
+<section class="video-section">
+  <div class="section-inner">
+    <div class="section-tag">Veja como funciona</div>
+    <h2>Veja o que você<br>vai receber</h2>
+    <div class="video-wrapper">
+      <!--
+        Para adicionar seu vídeo, substitua o bloco abaixo por:
+        <iframe src="https://www.youtube.com/embed/SEU_ID" allowfullscreen></iframe>
+        ou
+        <iframe src="https://player.vimeo.com/video/SEU_ID" allowfullscreen></iframe>
+      -->
+      <div class="video-placeholder">
+        <div class="play-btn">▶</div>
+        <span>Cole aqui o link do seu vídeo</span>
+        <span style="font-size:0.75rem;opacity:0.6;">YouTube · Vimeo · Panda Video</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section" style="background:white;">
+  <div class="section-inner">
+    <div class="section-tag">Passo a passo</div>
+    <h2>Em 3 passos simples<br>você já começa hoje</h2>
+    <div style="margin-top:32px;display:flex;flex-direction:column;gap:20px;">
+      <div style="display:flex;gap:20px;align-items:flex-start;">
+        <div style="width:44px;height:44px;border-radius:50%;background:var(--brown);color:white;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.1rem;flex-shrink:0;">1</div>
+        <div>
+          <p style="font-weight:800;font-size:1rem;color:var(--brown-dark);margin-bottom:4px;">Finalize sua compra</p>
+          <p style="color:var(--text-soft);font-size:0.93rem;line-height:1.6;">Escolha seu plano e conclua o pagamento com segurança. O processo leva menos de 2 minutos.</p>
+        </div>
+      </div>
+      <div style="display:flex;gap:20px;align-items:flex-start;">
+        <div style="width:44px;height:44px;border-radius:50%;background:var(--gold);color:white;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.1rem;flex-shrink:0;">2</div>
+        <div>
+          <p style="font-weight:800;font-size:1rem;color:var(--brown-dark);margin-bottom:4px;">Receba no e-mail ou WhatsApp</p>
+          <p style="color:var(--text-soft);font-size:0.93rem;line-height:1.6;">Assim que o pagamento for confirmado, todo o material é enviado automaticamente para o e-mail usado na compra ou no WhatsApp, se preferir. Acesso imediato.</p>
+        </div>
+      </div>
+      <div style="display:flex;gap:20px;align-items:flex-start;">
+        <div style="width:44px;height:44px;border-radius:50%;background:var(--green);color:white;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.1rem;flex-shrink:0;">3</div>
+        <div>
+          <p style="font-weight:800;font-size:1rem;color:var(--brown-dark);margin-bottom:4px;">Imprima, monte e ore junto</p>
+          <p style="color:var(--text-soft);font-size:0.93rem;line-height:1.6;">Baixe o PDF, imprima e recorte os cartõezinhos, coloque num potinho e crie o ritual. Todo dia, seu filho tira uma oração e conversa com Deus com você. Em 5 minutos, criou uma memória para a vida inteira.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section testimonials-section">
+  <div class="section-inner">
+    <div class="section-tag">Depoimentos</div>
+    <h2>O que as famílias estão dizendo</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>Minha filha de 6 anos agora corre para o potinho toda noite antes de dormir. Ela mesma lembra de orar. Não acreditei quando aconteceu — chorei de gratidão.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">👩</div>
+          <div><div class="testimonial-name">Ana Paula S.</div><div class="testimonial-role">Mãe de 2 filhos · São Paulo</div></div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>Dei para meu neto de 5 anos e ele adora tirar a "surpresa de Deus" como ele chama. Nunca vi ele tão animado com algo espiritual. Presentei mais 3 amigas.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">👵</div>
+          <div><div class="testimonial-name">Dona Maria José</div><div class="testimonial-role">Avó orgulhosa · Recife</div></div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>Trabalho o dia todo e chegava sem energia. O potinho virou nosso momento especial de todos os dias. Simples, rápido e transformador. Vale muito mais do que custou.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">👨</div>
+          <div><div class="testimonial-name">Carlos Eduardo</div><div class="testimonial-role">Pai de família · Belo Horizonte</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section pricing-section" id="pricing">
+  <div class="section-inner">
+    <div class="section-tag">Escolha seu plano</div>
+    <h2>Comece hoje por<br>menos do que um café</h2>
+    <p style="color:var(--text-soft);line-height:1.7;margin-bottom:32px;">Escolha o pacote que faz mais sentido para você. Todos com entrega imediata.</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start;">
+
+      <!-- BÁSICO -->
+      <div class="price-card">
+        <div style="text-align:center;margin-bottom:16px;">
+          <div style="font-size:32px;margin-bottom:6px;">🫙</div>
+          <div style="font-weight:800;font-size:1rem;color:var(--brown-dark);margin-bottom:4px;">Básico</div>
+          <div style="font-family:'Playfair Display',serif;font-size:2rem;color:var(--brown);font-weight:700;line-height:1;">R$9,90</div>
+          <div style="font-size:0.75rem;color:#aaa;margin-top:2px;">pagamento único</div>
+        </div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:20px;padding:0;">
+          <li style="display:flex;gap:8px;font-size:0.83rem;color:var(--text-soft);"><span style="color:var(--green);font-weight:800;">✓</span> 96 orações infantis</li>
+          <li style="display:flex;gap:8px;font-size:0.83rem;color:#ccc;"><span>✗</span> 365 Versículos Bíblicos</li>
+          <li style="display:flex;gap:8px;font-size:0.83rem;color:#ccc;"><span>✗</span> Rótulos personalizados</li>
+          <li style="display:flex;gap:8px;font-size:0.83rem;color:#ccc;"><span>✗</span> Guia para pais</li>
+        </ul>
+        <button id="basicoBtn" style="display:block;width:100%;background:#f5f0e8;color:var(--brown);font-family:'Nunito',sans-serif;font-size:0.88rem;font-weight:800;padding:12px;border-radius:40px;border:1.5px solid #EAD8B8;cursor:pointer;">
+          Quero o Básico
+        </button>
+      </div>
+
+      <!-- COMPLETO -->
+      <div class="price-card featured" style="transform:scale(1.03);">
+        <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(90deg,#4A7C59,#2D5A3D);color:white;font-size:11px;font-weight:800;padding:5px 16px;border-radius:20px;white-space:nowrap;box-shadow:0 4px 12px rgba(74,124,89,0.4);">⭐ Mais escolhido</div>
+        <div style="text-align:center;margin-bottom:16px;">
+          <div style="font-size:32px;margin-bottom:6px;">🌟</div>
+          <div style="font-weight:800;font-size:1rem;color:var(--brown-dark);margin-bottom:4px;">Completo</div>
+          <div style="font-family:'Playfair Display',serif;font-size:2rem;color:var(--green);font-weight:700;line-height:1;">R$19,90</div>
+          <div style="font-size:0.75rem;color:#aaa;margin-top:2px;">pagamento único</div>
+        </div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:20px;padding:0;">
+          <li style="display:flex;gap:8px;font-size:0.83rem;color:var(--text);"><span style="color:var(--green);font-weight:800;">✓</span> 96 orações infantis</li>
+          <li style="display:flex;gap:8px;font-size:0.83rem;color:var(--text);"><span style="color:var(--green);font-weight:800;">✓</span> 365 Versículos Bíblicos</li>
+          <li style="display:flex;gap:8px;font-size:0.83rem;color:var(--text);"><span style="color:var(--green);font-weight:800;">✓</span> Rótulos personalizados</li>
+          <li style="display:flex;gap:8px;font-size:0.83rem;color:var(--text);"><span style="color:var(--green);font-weight:800;">✓</span> Molde de caixinha</li>
+          <li style="display:flex;gap:8px;font-size:0.83rem;color:var(--text);"><span style="color:var(--green);font-weight:800;">✓</span> Guia para pais</li>
+        </ul>
+        <button class="cta-price" id="completoBtn" style="font-size:0.88rem;padding:12px;">
+          Quero o Completo →
+        </button>
+        <p style="text-align:center;font-size:0.72rem;color:var(--green);margin-top:8px;font-weight:700;">Tudo que sua família precisa</p>
+      </div>
+    </div>
+    <p style="text-align:center;color:var(--text-soft);font-size:0.82rem;margin-top:20px;">🔒 Pagamento seguro · Entrega imediata · Garantia de 30 dias</p>
+  </div>
+</section>
+
+<!-- AUTORA -->
+<section class="section autora-section">
+  <div class="section-inner">
+    <div class="section-tag">Quem criou</div>
+    <h2>Feito com fé,<br>por quem vive isso</h2>
+    <div class="autora-card" style="margin-top:28px;">
+      <div class="autora-photo" id="autoraPhoto">
+        <!-- Quando tiver a foto, substitua por: <img src="URL" alt="Foto"> -->
+        <span style="pointer-events:none;">Sua<br>foto<br>aqui</span>
+      </div>
+      <div>
+        <div class="autora-name">Irmã Ana Beatriz</div>
+        <div class="autora-role">Catequista · Criadora do Potinho da Fé</div>
+        <p class="autora-bio">
+          Sou catequista na minha paróquia há mais de 12 anos. Nesse tempo, vi de perto o quanto as famílias querem criar seus filhos na fé — mas a correria do dia a dia torna tudo tão difícil.
+          <br><br>
+          O Potinho da Fé nasceu de uma necessidade real: eu mesma precisava de algo simples para usar com as crianças da catequese e sugerir aos pais. Testei em casa, na paróquia, com amigas — e o resultado foi lindo demais para guardar só pra mim.
+          <br><br>
+          Criei esse material com muito carinho e oração. O valor é simbólico porque meu desejo é que nenhuma família fique sem esse presente por falta de condição. Que Deus abençoe cada lar que receber esse potinho. 🙏
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<section class="section guarantee-section">
+  <div class="section-inner">
+    <div class="guarantee-box">
+      <div class="guarantee-icon">🛡️</div>
+      <h3>Garantia de 30 dias</h3>
+      <p>Se em 30 dias você achar que o Potinho da Fé não trouxe mais proximidade espiritual para a sua família, devolvemos <strong>100% do seu dinheiro</strong>, sem burocracia e sem perguntas. Zero risco para você.</p>
+      <div style="margin-top:20px;padding:14px 20px;background:#F0FAF3;border-radius:12px;display:inline-block;">
+        <p style="font-size:0.88rem;color:var(--green);font-weight:700;">✓ Compra segura e sem risco</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq-section">
+  <div class="section-inner">
+    <div class="section-tag">Dúvidas</div>
+    <h2>Perguntas frequentes</h2>
+    <div style="margin-top:28px;">
+      <div class="faq-item">
+        <div class="faq-q">Como recebo o material? <span class="arrow">▼</span></div>
+        <div class="faq-a">Após o pagamento confirmado, você recebe o link de download direto por e-mail ou WhatsApp. O acesso é imediato — você já pode baixar e imprimir hoje mesmo.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Vocês vendem o potinho físico? <span class="arrow">▼</span></div>
+        <div class="faq-a">Não, o Potinho da Fé é um material 100% digital. Você imprime, recorta e coloca num potinho qualquer — encontra facilmente em lojas de utilidades por volta de R$9.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Para qual faixa etária é indicado? <span class="arrow">▼</span></div>
+        <div class="faq-a">As orações foram criadas para crianças de 3 a 12 anos. Para as menores, o ideal é que um adulto leia junto. As maiores já conseguem ler sozinhas — o que torna ainda mais especial!</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Posso imprimir quantas vezes quiser? <span class="arrow">▼</span></div>
+        <div class="faq-a">Sim! O arquivo é seu para uso pessoal e familiar. Pode imprimir para seus filhos, netos, sobrinhos — quantas vezes precisar.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Como funciona a garantia de 30 dias? <span class="arrow">▼</span></div>
+        <div class="faq-a">Se dentro de 30 dias após a compra você não estiver satisfeita, basta nos mandar uma mensagem e devolvemos 100% do valor pago, sem perguntas e sem burocracia.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <h2>Comece hoje este ritual<br>de fé na sua família</h2>
+  <p>Cada dia que passa é um dia que seu filho poderia estar crescendo com Deus no coração. Por R$9,90, você começa agora.</p>
+  <button class="cta-hero" id="finalCta">Quero o Potinho da Fé →</button>
+  <p class="disclaimer">🔒 Acesso imediato · Garantia de 30 dias · Pagamento seguro</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Potinho da Fé · Todos os direitos reservados</p>
+  <p style="margin-top:6px;"><a href="#">Política de Privacidade</a> · <a href="#">Termos de Uso</a> · <a href="#">Contato</a></p>
+  <p style="margin-top:10px;font-size:0.7rem;">Este produto é 100% digital. Resultado pode variar.</p>
+</footer>
+
+<script>
+(function () {
+
+  /* ── SCROLL TO PRICING ── */
+  function goToPricing() {
+    document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });
+  }
+  document.getElementById('heroCta').addEventListener('click', goToPricing);
+  document.getElementById('stickyBtn').addEventListener('click', goToPricing);
+  document.getElementById('solutionCta').addEventListener('click', goToPricing);
+  document.getElementById('finalCta').addEventListener('click', goToPricing);
+
+  /* ── STICKY BAR ── */
+  window.addEventListener('scroll', function () {
+    var bar = document.getElementById('stickyBar');
+    if (window.scrollY > 400) { bar.classList.add('visible'); }
+    else { bar.classList.remove('visible'); }
+  });
+
+  /* ── UPSELL MODAL ── */
+  function openUpsell() {
+    document.getElementById('upsellOverlay').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeUpsell() {
+    document.getElementById('upsellOverlay').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('basicoBtn').addEventListener('click', openUpsell);
+  document.getElementById('upsellClose').addEventListener('click', closeUpsell);
+  document.getElementById('upsellOverlay').addEventListener('click', function (e) {
+    if (e.target === this) { closeUpsell(); }
+  });
+  document.getElementById('upsellAccept').addEventListener('click', function () {
+    closeUpsell();
+    window.location.href = '#checkout-completo';
+  });
+  document.getElementById('upsellDecline').addEventListener('click', function () {
+    closeUpsell();
+    window.location.href = '#checkout-basico';
+  });
+  document.getElementById('completoBtn').addEventListener('click', function () {
+    window.location.href = '#checkout-completo';
+  });
+
+  /* ── FAQ TOGGLE ── */
+  document.querySelectorAll('.faq-q').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var item = this.closest('.faq-item');
+      var wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function (i) { i.classList.remove('open'); });
+      if (!wasOpen) { item.classList.add('open'); }
+    });
+  });
+
+  /* ── SOCIAL PROOF TOASTS ── */
+  var toastData = [
+    { name: 'Maria Clara',    msg: 'acabou de comprar o Pacote Completo', city: 'Sao Paulo'       },
+    { name: 'Andressa R.',    msg: 'comprou agora o Potinho da Fe',        city: 'Fortaleza'       },
+    { name: 'Conceicao M.',   msg: 'presenteou a neta com o Completo',    city: 'Salvador'        },
+    { name: 'Juliana M.',     msg: 'acabou de comprar o Pacote Completo', city: 'Curitiba'        },
+    { name: 'Roberto S.',     msg: 'comprou para os filhos agora',         city: 'Brasilia'        },
+    { name: 'Fernanda T.',    msg: 'acabou de comprar o Pacote Completo', city: 'Rio de Janeiro'  },
+    { name: 'Claudia V.',     msg: 'comprou 2 unidades para presentear',  city: 'Recife'          },
+    { name: 'Marcos A.',      msg: 'acabou de adquirir o Completo',       city: 'Goiania'         },
+    { name: 'Rosinha B.',     msg: 'presenteou os sobrinhos agora',       city: 'Minas Gerais'    },
+    { name: 'Patricia L.',    msg: 'acabou de comprar o Pacote Completo', city: 'Porto Alegre'    }
+  ];
+
+  var toastIdx = 0;
+  var toastEl  = document.getElementById('toastNotif');
+
+  function showToast() {
+    var d = toastData[toastIdx % toastData.length];
+    toastIdx++;
+    document.getElementById('toastName').textContent = d.name;
+    document.getElementById('toastMsg').textContent  = d.msg;
+    document.getElementById('toastCity').textContent = d.city + ' · agora mesmo';
+    toastEl.style.transform = 'translateX(0)';
+    setTimeout(function () { toastEl.style.transform = 'translateX(-120%)'; }, 4500);
+  }
+
+  function scheduleToast() {
+    var delay = Math.floor(Math.random() * 12000) + 18000;
+    setTimeout(function () { showToast(); scheduleToast(); }, delay);
+  }
+
+  setTimeout(function () { showToast(); scheduleToast(); }, 7000);
+
+}());
+</script>
+</body>
+</html>
